@@ -16,8 +16,8 @@ app.get('/', function get(req, res) {
     res.status(200).send('Greetings!');
 });
 
-app.post('/greeting', function(req, res) {
-    var body = req.body;;
+app.post('/greeting/birthday', function(req, res) {
+    var body = req.body;
     try {
         var result = greetingsController.greetForBirthday(body.from, body.to, body.subject, body.text);
         res.status(200).send('Email sent successfully!');
