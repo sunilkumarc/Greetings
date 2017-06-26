@@ -1,10 +1,13 @@
 var express = require('express');
 var greetingsController = require('./greeting');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 var app = express();
 
+// Middlewares
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, './')));
 
 function startServer(port) {
     var port = Number(process.env.PORT || port);
