@@ -1,0 +1,26 @@
+{
+  "name": "greetings",
+  "version": "1.0.0",
+  "description": "An app to send greetings to your loved ones on special occasions.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunilkumarc/Greetings.git"
+  },
+  "author": "Sunil Kumar C",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunilkumarc/Greetings/issues"
+  },
+  "homepage": "https://github.com/sunilkumarc/Greetings#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "mailgun-js": "^0.11.2",
+    "path": "^0.12.7"
+  }
+}
