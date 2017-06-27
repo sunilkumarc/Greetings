@@ -1,8 +1,8 @@
 var Mail = require('./email');
 
 function Greet() {
-    function sendBirthdayGreeting(from, to, subject, text) {
-        return Mail.sendMail(from, to, subject, text);
+    function sendBirthdayGreeting(from, to, subject, text, filePath) {
+        return Mail.sendMail(from, to, subject, text, filePath);
     }
 
     function sendMarriageGreeting(name) {

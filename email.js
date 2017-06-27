@@ -5,10 +5,10 @@ var mailcomposer = require('mailcomposer')
 var fs = require('fs');
 
 function Mail() {
-    function sendMail(from, to, subject, text) {
+    function sendMail(from, to, subject, text, filePath) {
         // var contents = "<!DOCTYPE><html>" + text + "<br/><br/>Access your birthday card <a href=\"http://pump-attendant-yards-47683.bitballoon.com/\">here</a></html>";
+        /*
         var contents = fs.readFileSync('./template.html', 'utf8');
-        console.log(contents);
         var mail = mailcomposer({
             from: from,
             to: to,
@@ -34,6 +34,21 @@ function Mail() {
                 }
             });
         });
+        */
+
+        /* Sending Inline Images */
+        var data = {
+            from: from,
+            to: to,
+            subject: subject,
+            text: text,
+            inline: filePath
+        };
+
+        mailgun.messages().send(data, function (error, body) {
+            console.log(body);
+        });
+        
     }
 
     return {
